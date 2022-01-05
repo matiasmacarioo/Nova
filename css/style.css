@@ -1,0 +1,152 @@
+body {
+    background-color: #000000;
+}
+
+a {
+    color: #666666;
+}
+
+
+.navbar {
+    background-color: #000000b2;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+.rebote {
+    animation: bounce;
+    animation-duration: 1s;
+}
+
+.entrada {
+    animation: fadeInDownBig;
+    animation-duration: 2s;
+}
+
+.fadeIn {
+    animation: fadeInUp;
+    animation-duration: 1s;
+}
+
+.flash {
+    animation: flash;
+    animation-duration: 1.5s;
+}
+
+.fadeInLeft {
+    animation: fadeInLeft;
+    animation-duration: 1s;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.logo {
+    font-family: 'Zilla Slab Highlight', cursive;
+    /* font-size: x-large; */
+}
+
+.logo2 {
+    font-family: 'Zilla Slab', serif;
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: .25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+
+.titulo {
+    font-family: 'Zilla Slab', serif;
+    padding-bottom: 1rem;
+    color: rgb(192, 192, 192);
+    text-align: center;
+}
+
+
+.texto {
+    font-family: 'Zilla Slab', serif;
+    color: rgb(192, 192, 192);
+    text-align: justify;
+    padding-top: 2rem;
+}
+
+/* Carrusel */
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slider {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+}
+
+/* Fin carrusel */
+
+
+.text-gray {
+    color: #666666;
+}
